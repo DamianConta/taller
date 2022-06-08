@@ -60,7 +60,6 @@ async function deleteAuto (req,res){
     }
   }
 
-
   module.exports = {
       getAutos,
       getAuto,

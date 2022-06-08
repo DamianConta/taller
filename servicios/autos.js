@@ -18,7 +18,6 @@ async function autosSave(data){
 }
 
 async function autosDeleteOne(data){
-
     try{
         return await modelos.autoModel.deleteOne(data, function (err){
             if (err) throw err
@@ -29,7 +28,6 @@ async function autosDeleteOne(data){
 }
 
 async function autosUpdateOne(filtro, update){
-
     try{
         return await modelos.autoModel.updateOne(filtro,update)
     }catch(error){

@@ -26,9 +26,9 @@ const app = express();
 app.use(express.static(__dirname + '/views'));
 app.use(bodyParser.urlencoded({extended: true}));
 
-// -----------------------
-//      Ruteo             
-// -----------------------
+// -----------------------//
+//      Ruteo             //
+// -----------------------//
 
 app.get('/v1/autos', autos.getAutos);
 

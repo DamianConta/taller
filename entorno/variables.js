@@ -14,6 +14,7 @@ const precios ={
             servicio : "Otro"}
 }
 
+
 module.exports = {
     precios,
     NOPINTAR

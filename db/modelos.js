@@ -14,7 +14,6 @@ const propietarioSchema = new Schema({
 })
 
 const autoSchema = new Schema({
-  
     marca : String,
     modelo : String,
     anio : String,

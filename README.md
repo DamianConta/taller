@@ -17,7 +17,7 @@ node .\server.js
 
 ## Acerca de esta app
 
-La aplicación responde a los siguientes endpoints
+La aplicación responde a los siguientes endpoints:
 
 REST API
 

@@ -1,7 +1,6 @@
 const {propietariosSave} = require('../servicios/propietarios')
 
 async function postPropietario (req,res){
-
     const {nombre, apellido} = req.body
     try{
       const respuesta = await propietariosSave({nombre, apellido})
