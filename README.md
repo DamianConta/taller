@@ -42,7 +42,7 @@ PUT     /v1/autos/patente   		    Actualiza un auto. (JSON)
 ## METODO : GET  REQUEST : http://localhost:8080/v1/autos
 RESPONSE:
 
-### Array Json
+Array Json
 ```json
 [{"_id":"629f5476f038458250d43466",
 "marca":"Volkswagen",
@@ -72,7 +72,7 @@ RESPONSE:
 ## METODO : GET  REQUEST : http://localhost:8080/v1/autos/{patente}
 RESPONSE:
 
-### Array Json
+Array Json
 ```json
 {"_id":"629f5476f038458250d43466",
 "marca":"Volkswagen",
@@ -87,10 +87,10 @@ RESPONSE:
 "__v":0}
 ```
 
-### METHOD : GET REQUEST : http://localhost:8080/v1/servicios/{patente}
+### METODO : GET REQUEST : http://localhost:8080/v1/servicios/{patente}
 RESPONSE:
 
-### Array Json
+Array Json
 ```json
 {
   {"_id":"629f939b12fceb8c50317541",
@@ -122,7 +122,7 @@ RESPONSE:
 ### METODO : POST  REQUEST : http://localhost:8080/v1/propietarios
 RESPONSE:
 
-### Array Json
+Array Json
 ```json
 {
   "_id":"629f95aa12fceb8c50317546",
@@ -134,7 +134,7 @@ RESPONSE:
 ### METODO : POST  REQUEST : http://localhost:8080/v1/servicios/{patente}
 RESPONSE:
 
-### Array Json
+Array Json
 ```json
 {"Presupuesto Total $":35300}
 ```
@@ -142,7 +142,7 @@ RESPONSE:
 ### METODO : POST  REQUEST : http://localhost:8080/v1/autos
 RESPONSE:
 
-### Array Json
+Array Json
 ```json
 
 {
@@ -159,7 +159,7 @@ RESPONSE:
 ### METODO : DELETE  REQUEST : http://localhost:8080/v1/autos/{patente}
 RESPONSE:
 
-### Array Json
+Array Json
 ```json
 {
   "Deleted":"ok"
@@ -169,7 +169,7 @@ RESPONSE:
 ### METODO : PUT  REQUEST : http://localhost:8080/v1/autos/{patente}
 RESPONSE:
 
-### Array Json
+Array Json
 ```json
 
 {
