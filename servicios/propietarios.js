@@ -9,7 +9,6 @@ async function propietariosSave(data){
     }
 }
 
-
 module.exports = {
     propietariosSave
 }

@@ -1,6 +1,6 @@
 const modelos = require('../db/modelos')
 const {serviciosFind, serviciosSave} = require('../servicios/servicios') 
-const entorno = require('../entorno/variables')
+const {servicios, NOPINTAR, PINTURA} = require('../entorno/variables')
 const {autosFind} = require('../servicios/autos')
 
 async function getServicios (req,res){
@@ -20,17 +20,18 @@ async function getServicios (req,res){
 }
 
 async function postServicio (req,res){
-  await autosFind({patente : req.body.patente})
+  await autosFind({patente : req.params.patente})
     .then(resultado=>{
       var presupuesto = 0
       const result = JSON.parse(JSON.stringify(resultado))
-      const auto = result[0]._id
       if (!(result.length===0)){
+        const auto = result[0]._id
         for (const propiedad in req.body) {
-          if (propiedad!="patente") {
-            presupuesto+=entorno.precios[propiedad].precio;
-            const servicio = entorno.precios[propiedad].servicio
-            const costo = entorno.precios[propiedad].precio
+          if (!((NOPINTAR===result[0].color)&&(propiedad===PINTURA))){
+            console.log(propiedad)
+            presupuesto+=servicios[propiedad].precio;
+            const servicio = servicios[propiedad].servicio;
+            const costo = servicios[propiedad].precio;
             try{
                 serviciosSave({servicio, costo, auto}).then(respuesta =>{
               })
@@ -39,12 +40,10 @@ async function postServicio (req,res){
             }
           }
         }
-        res.json({"Presupuesto Total $": presupuesto}) 
-        res.status(200)
-      }
+        res.status(200).json({"Presupuesto Total $": presupuesto}).end() 
+      }else res.status(200).json({"Response" : "Patente no encontrada"}).end()
     })    
   }
-
   
 module.exports = {
     getServicios,

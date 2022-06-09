@@ -4,33 +4,14 @@
 		<meta charset="UTF-8">
 		<title>Pickit</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<link rel="stylesheet" href="styles.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-		<style>
-			label {
-				width:150px;
-			}
-			input {
-				margin: 10px;
-			}
-			.caja {
-				margin: 20px auto;
-				padding: 10px;
-				width:50%;
-				text-align: center;
-				border: solid 1px black;
-				border-radius: 15px;
-				background-color: #f6e58d;
-			}
-
-		</style>
 	</head>
 
 	<body id ="body">
-
 		<div class="caja">
 			<h1>POST SERVICIOS</h1>
 			<form id = "servicios" action="/v1/servicios" method="POST">
@@ -48,9 +29,7 @@
 				<input id ="btnServicios" class="btn btn-success" type="submit" style="width: 50%;" value="POST">
 			</form>
 		</div>
-
- <hr>
-
+ 	<hr>
 		<div class="caja">
 			<h1>POST PROPIETARIO</h1>
 			<form action="/v1/propietarios" method="POST">
@@ -64,138 +43,111 @@
 				<input class="btn btn-success" type="submit" style="width: 50%;" value="POST">
 			</form>
 		</div>
-
- <hr>
-
-	<div Class = "caja">
+ 	<hr>
+		<div Class = "caja">
 			<h1>POST AUTO</h1>
-		<form action='/v1/autos' method="POST" id = "autos">
+			<form action='/v1/autos' method="POST" id = "autos">
 
-			<label for="marca">Marca</label>
-			<input id="marca" type="text" name="marca"><br>
+				<label for="marca">Marca</label>
+				<input id="marca" type="text" name="marca"><br>
 
-			<label for="modelo">Modelo</label>
-			<input id="modelo" type="text" name="modelo"><br>
+				<label for="modelo">Modelo</label>
+				<input id="modelo" type="text" name="modelo"><br>
 
-			<label for="anio">Año</label>
-			<input id="anio" type="text" name="anio"><br>
+				<label for="anio">Año</label>
+				<input id="anio" type="text" name="anio"><br>
 
-			<label for="patente">Patente</label>
-			<input id="patente" type="text" name="patente" required><br>
+				<label for="patente">Patente</label>
+				<input id="patente" type="text" name="patente" required><br>
 
-			<label for="color">Color</label>
-			<input id="color" type="text" name="color"><br>
+				<label for="color">Color</label>
+				<input id="color" type="text" name="color"><br>
 
-			<label for="nombre">Nombre</label>
-			<input id="nombre" type="text" name="nombre" required><br>
+				<label for="nombre">Nombre</label>
+				<input id="nombre" type="text" name="nombre" required><br>
 
-			<label for="apellido">Apellido</label>
-			<input id="apellido" type="text" name="apellido" required><br>
+				<label for="apellido">Apellido</label>
+				<input id="apellido" type="text" name="apellido" required><br>
 
-			<input id="btnCrearAuto"class="btn btn-success" type="submit" style="width: 50%;" value = "POST" >
-		</form>
-
-	</div>
-
+				<input id="btnCrearAuto"class="btn btn-success" type="submit" style="width: 50%;" value = "POST" >
+			</form>
+		</div>
 	<hr>
+		<div Class = "caja">
+			<h1>PUT AUTO</h1>
+			<form action='/v1/autos' method="PUT" id = "formPut">
 
-	<div Class = "caja">
-		<h1>PUT AUTO</h1>
-		<form action='/v1/autos' method="PUT" id = "formPut">
+				<label for="marca">Marca</label>
+				<input id="marca" type="text" name="marca"><br>
 
-			<label for="marca">Marca</label>
-			<input id="marca" type="text" name="marca"><br>
+				<label for="modelo">Modelo</label>
+				<input id="modelo" type="text" name="modelo"><br>
 
-			<label for="modelo">Modelo</label>
-			<input id="modelo" type="text" name="modelo"><br>
+				<label for="anio">Año</label>
+				<input id="anio" type="text" name="anio"><br>
 
-			<label for="anio">Año</label>
-			<input id="anio" type="text" name="anio"><br>
+				<label for="patente">Patente</label>
+				<input id="patente" type="text" name="patente" required><br>
 
-			<label for="patente">Patente</label>
-			<input id="patente" type="text" name="patente" required><br>
+				<label for="color">Color</label>
+				<input id="color" type="text" name="color"><br>
 
-			<label for="color">Color</label>
-			<input id="color" type="text" name="color"><br>
-
-			<input id="btnPut"class="btn btn-success" type="submit" style="width: 50%;" value = "PUT" >
-		</form>
-
-	</div>
-
+				<input id="btnPut"class="btn btn-success" type="submit" style="width: 50%;" value = "PUT" >
+			</form>
+		</div>
 	<hr>
-	<div class="caja">
-
-		<h1>DELETE AUTO</h1>
-
-		<form id = "formDelete" action="/v1/autos" method="DELETE">
-
-			<label for="patente">Patente</label>
-			<input id="patente" type="text" name="patente" required><br>
-
-
-			<input id ="btnAutoDelete" class="btn btn-success" type="submit" style="width: 50%;" value="DELETE">
-		</form>
-	</div>
-
+			<div class="caja">
+			<h1>DELETE AUTO</h1>
+			<form id = "formDelete" action="/v1/autos" method="DELETE">
+				<label for="patente">Patente</label>
+				<input id="patente" type="text" name="patente" required><br>
+				<input id ="btnAutoDelete" class="btn btn-success" type="submit" style="width: 50%;" value="DELETE">
+			</form>
+		</div>
 	<hr>
 	<hr>
 
 		<script>
-
+			const URL = 'http://localhost:8080'
 			const formDelete = document.getElementById("formDelete")
+			const formServicios = document.getElementById("servicios")
+			const formPut = document.getElementById("formPut")
 			const btnAutoDelete = document.getElementById("btnAutoDelete")
+			const btnPut = document.getElementById("btnPut")
+			const btnServicios = document.getElementById("btnServicios")
 			const body = document.getElementById("body")
 
 			btnAutoDelete.addEventListener("click",deleteAuto)
+			btnServicios.addEventListener("click",postServicios)
+			btnPut.addEventListener("click",actualizar)
 
 			function deleteAuto(e){
 				e.preventDefault()
-				let form_data = new FormData(formServicios);
-				let form_str = new URLSearchParams(form_data).toString();
-
-				fetch('http://localhost:8080/v1/autos/'+ formDelete.patente.value,{
-					method : 'DELETE',
-					headers: {
-					'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-					},
-					body: form_str
-				}).then(response => response.json())
-				.then(data => body.innerHTML=JSON.stringify(data));
-			}
-
-			const formPut = document.getElementById("formPut")
-			const btnPut = document.getElementById("btnPut")
-
-			btnPut.addEventListener("click",actualizar)
-
+				formularioFetch(e,formDelete, URL +'/v1/autos/','DELETE')
+			}			
+			
 			function actualizar(e){
 				e.preventDefault()
-				let form_data = new FormData(formPut);
-				let form_str = new URLSearchParams(form_data).toString();
-				fetch('http://localhost:8080/v1/autos/'+ formPut.patente.value,{
-					method : 'PUT',
-					headers: {
-					'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-					},
-					body: form_str
-				}).then(response => response.json())
-				.then(data => body.innerHTML=JSON.stringify(data));
+				formularioFetch(e,formPut,'http://localhost:8080/v1/autos/','PUT')
 			}
-
-			const formServicios = document.getElementById("servicios")
-			const btnServicios = document.getElementById("btnServicios")
-
-			btnServicios.addEventListener("click",postServicios)
 
 			function postServicios(e){
 				e.preventDefault()
-				let form_data = new FormData(formServicios);
+				formularioFetch(e,formServicios,'http://localhost:8080/v1/servicios/','POST')
+			}
+
+			function formularioFetch(e,form,url,metodo){
+				let form_data = new FormData(form);
 				let form_str = new URLSearchParams(form_data).toString();
 
-				console.log(form_str)
-				fetch('http://localhost:8080/v1/servicios/'+ formServicios.patente.value,{
-					method : 'POST',
+				if (e.target.id="btnServicios"){
+					form_split =form_str.split("&")
+					form_split.shift();
+					form_str = form_split.join("&")
+				}
+
+				fetch(url+ form.patente.value,{
+					method : metodo,
 					headers: {
 					'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
 					},
@@ -203,7 +155,6 @@
 				}).then(response => response.json())
 				.then(data => body.innerHTML=JSON.stringify(data));
 			}
-
 		</script>
 	</body>
 </html>

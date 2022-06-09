@@ -1,7 +1,8 @@
 
 const NOPINTAR = "GRIS"
+const PINTURA = "pintura"
 
-const precios ={
+const servicios ={
     "aceite" : {precio : 5000,
                 servicio: "Cambio de Aceite"},
     "filtro" : {precio : 3500,
@@ -14,9 +15,9 @@ const precios ={
             servicio : "Otro"}
 }
 
-
 module.exports = {
-    precios,
-    NOPINTAR
+    servicios,
+    NOPINTAR,
+    PINTURA
 }
 

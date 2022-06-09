@@ -19,9 +19,7 @@ async function autosSave(data){
 
 async function autosDeleteOne(data){
     try{
-        return await modelos.autoModel.deleteOne(data, function (err){
-            if (err) throw err
-        })
+        return await modelos.autoModel.deleteOne(data)
     }catch(error){
         throw error
     }

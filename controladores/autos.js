@@ -6,7 +6,6 @@ async function getAutos(req,res){
   try{  
       const respuesta = await autosFind({})    
       res.status(200).json(respuesta).end()
-      console.log(respuesta)   
   }catch(err){
     throw new Error('Error al obtener autos')
   }
@@ -14,9 +13,8 @@ async function getAutos(req,res){
 
 async function getAuto (req,res){
   try{  
-      const respuesta = await autosFind({patente : req.params.patente})    
+      const respuesta = await autosFind({patente : req.params.patente})  
       res.status(200).json(respuesta).end()
-      console.log(respuesta)   
   }catch(err){
     throw new Error('Error al obtener auto')
   }
@@ -38,10 +36,9 @@ async function postAuto (req,res){
 async function deleteAuto (req,res){
   try{
     const result = await autosDeleteOne({patente : req.params.patente})
-    if (result.ok===1) {
-      res.json({"Deleted":"ok"})
-      res.status(200).end()
-    }
+    console.log(result)
+    if (result.deletedCount===1) res.status(200).json({"Respuesta":"Ok"}).end()
+    else res.status(200).json({"Respuesta":"Error"}).end()
   }catch(error){
     throw new Error('Error al borrar auto')
   }
@@ -54,7 +51,10 @@ async function deleteAuto (req,res){
       modelo: req.body.modelo,
       anio: req.body.anio,
       color: req.body.color})
-      if (result.ok===1) res.json({"Actualizado":"Ok"})
+      console.log(result)
+      if (result.n===1){
+        res.status(200).json({"Respuesta":"Ok"}).end()
+      } else res.status(200).json({"Respuesta":"Error"}).end()
     }catch(error){
     throw new Error('Error al actualizar auto')
     }
