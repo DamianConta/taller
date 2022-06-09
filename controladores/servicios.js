@@ -2,6 +2,11 @@ const modelos = require('../db/modelos')
 const {serviciosFind, serviciosSave} = require('../servicios/servicios') 
 const {servicios, NOPINTAR, PINTURA} = require('../entorno/variables')
 const {autosFind} = require('../servicios/autos')
+const HEADERS = {
+  "Access-Control-Allow-Origin" : "*",  
+  "Access-Control-Allow-Credentials" : true    
+  }
+
 
 async function getServicios (req,res){
   try{
@@ -13,6 +18,7 @@ async function getServicios (req,res){
       historial.push(servicio._doc)     
         }
       })
+    res.set(HEADERS)  
     res.status(200).json(historial).end()
   }catch(error){
     throw new Error('Error al obtener servicios')
@@ -40,6 +46,7 @@ async function postServicio (req,res){
             }
           }
         }
+        res.set(HEADERS)  
         res.status(200).json({"Presupuesto Total $": presupuesto}).end() 
       }else res.status(200).json({"Response" : "Patente no encontrada"}).end()
     })    

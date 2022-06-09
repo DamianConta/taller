@@ -18,6 +18,6 @@ const servicios ={
 module.exports = {
     servicios,
     NOPINTAR,
-    PINTURA
+    PINTURA,
 }
 
