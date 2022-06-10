@@ -5,7 +5,7 @@ const autos = require('./controladores/autos');
 const propietarios = require('./controladores/propietarios');
 const servicios = require('./controladores/servicios');
 
-const URL_DATABASE =  'mongodb://localhost/pickit';
+const URL_DATABASE =  'mongodb+srv://taller:A32147a@cluster0.wlnf6.mongodb.net/?retryWrites=true&w=majority'
 
 const config = {
     useNewUrlParser : true,

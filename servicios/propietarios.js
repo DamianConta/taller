@@ -1,8 +1,8 @@
-const modelos = require('../db/modelos')
+const { propietarioModel } = require('../db/modelos')
 
 async function propietariosSave(data){
     try{
-        const modelo = modelos.propietarioModel(data)
+        const modelo = propietarioModel(data)
         return await modelo.save()
     }catch(error){
         throw error

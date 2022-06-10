@@ -1,8 +1,8 @@
-const modelos = require('../db/modelos')
+const { autoModel, PROPIETARIO } = require( '../db/modelos')
 
 async function autosFind(filtro){
     try{
-        return await modelos.autoModel.find(filtro).populate(modelos.PROPIETARIO).exec()
+        return await autoModel.find(filtro).populate(PROPIETARIO).exec()
     }catch(error){
         throw error
     }
@@ -10,7 +10,7 @@ async function autosFind(filtro){
 
 async function autosSave(data){
     try{
-        const modelo = modelos.autoModel(data)
+        const modelo = autoModel(data)
         return await modelo.save()
     }catch(error){
         throw error
@@ -19,7 +19,7 @@ async function autosSave(data){
 
 async function autosDeleteOne(data){
     try{
-        return await modelos.autoModel.deleteOne(data)
+        return await autoModel.deleteOne(data)
     }catch(error){
         throw error
     }
@@ -27,7 +27,7 @@ async function autosDeleteOne(data){
 
 async function autosUpdateOne(filtro, update){
     try{
-        return await modelos.autoModel.updateOne(filtro,update)
+        return await autoModel.updateOne(filtro,update)
     }catch(error){
         throw(error)
     }      

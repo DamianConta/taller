@@ -4,16 +4,17 @@
 </p>
 
 ## Instalación
-
+Descargar todos los archivos y carpetas.
+Ejecutar el comando:
 ```sh
 npm i
 ```
-
 ## Uso
-
+Ejecutar en consola:
 ```sh
 node .\server.js
 ```
+En cualquier Browser ingresar a http://localhost:8080
 
 ## Acerca de esta app
 
